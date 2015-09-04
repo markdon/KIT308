@@ -15,20 +15,16 @@ unsigned int buffer[MAX_WIDTH * MAX_HEIGHT];
 
 //ADDED: ThreadData struct
 typedef struct {
+	Scene scene;			//The scene to render.
 	unsigned int threadID;	//Sequencial ID of thread.
 	unsigned int samples;	//Raytrace samples per pixel (aaLevel)
-	unsigned int width;		//Width of outpur image
-	unsigned int height;	//Height of output image
+	unsigned int width;		//The amount of pixels in each row
+	unsigned int height;	//Amount of rows this thread will render
 	unsigned int* outStart;	//Pointer to position in buffer to start writing
+	int yOffset;			//Offset the rows of the scene to render
 } ThreadData;
 
-DWORD __stdcall StartThread(void* threadDataIn)
-{
-	ThreadData* threadData = (ThreadData*)threadDataIn;
-	printf("%d\n",threadData->threadID);
 
-	ExitThread(NULL);
-}
 
 // reflect the ray from an object
 Ray calculateReflection(const Ray& viewRay, const Intersection& intersect) 
@@ -134,36 +130,19 @@ Colour traceRay(const Scene& scene, Ray viewRay)
 }
 
 
-
-/*	ADDED
-	threading()
-	create threads for running render()		*/
-void threading(Scene& scene, const int width, const int height, const int samples, bool colourise, unsigned int threads) {
-	//Create array of thread handles
-	HANDLE *threadHandles = new HANDLE[threads];
-
-	//Create array of ThreadData structs
-	ThreadData *tDatas = new ThreadData[threads];
-
-	for (unsigned int i = 0; i < threads; i++) {
-		tDatas[i].threadID = i;
-		threadHandles[i] = CreateThread(NULL, 0, StartThread, &tDatas[i], 0, NULL);
-	}
-
-	WaitForMultipleObjects(threads, threadHandles, TRUE, INFINITE);
-}
-
 // render scene at given width and height and anti-aliasing level
-void render(Scene& scene, const int width, const int height, const int aaLevel)
+//ADDED: outStart parameter specifies where output should start
+void render(Scene& scene, const int width, const int height, const int aaLevel, unsigned int* outStart, int yOffset)
 {
 	// angle between each successive ray cast (per pixel, anti-aliasing uses a fraction of this)
 	const float dirStepSize = 1.0f / (0.5f * width / tanf(PIOVER180 * 0.5f * scene.cameraFieldOfView));
 
 	// pointer to output buffer
-	unsigned int* out = buffer;
+	unsigned int* out = outStart;
 
 	// loop through all the pixels
-	for (int y = -height / 2; y < height / 2; ++y)
+	//ADDED: + yOffset. Shifts the scene area to render up/down according to thread
+	for (int y = (-height / 2); (y < height / 2); ++y)
 	{
 		for (int x = -width / 2; x < width / 2; ++x)
 		{
@@ -200,6 +179,48 @@ void render(Scene& scene, const int width, const int height, const int aaLevel)
 	}
 }
 
+/*	The function called for each thread.
+Starts a render() function with parameters from threadData
+*/
+DWORD __stdcall StartThread(void* threadDataIn)
+{
+	ThreadData* threadData = (ThreadData*)threadDataIn;
+
+	/*unsigned int* out = threadData->outStart;
+	for (unsigned int y = 0; y < threadData->height; y++) {
+	for (unsigned int x = 0; x < threadData->width; x++) {
+	*out++ = x + y;
+
+	}
+
+	}*/
+	printf("Thread: %d , %d", threadData->threadID, threadData->yOffset);
+	render(threadData->scene, threadData->width, threadData->height, threadData->samples, threadData->outStart, threadData->yOffset);
+
+	ExitThread(NULL);
+}
+
+/*	ADDED
+threading()
+Initialise variables for each ThreadData and begin the thread	*/
+void threading(Scene& scene, const int width, const int height, const int samples, bool colourise, unsigned int threads) {
+
+	HANDLE *threadHandles = new HANDLE[threads];	//Create array of thread handles
+	ThreadData *tDatas = new ThreadData[threads];	//Create array of ThreadData structs
+
+	for (unsigned int threadID = 0; threadID < threads; threadID++) {
+		tDatas[threadID].threadID = threadID;
+		tDatas[threadID].scene = scene;
+		tDatas[threadID].samples = samples;
+		tDatas[threadID].width = width;
+		tDatas[threadID].height = height / threads;
+		tDatas[threadID].yOffset = 0;
+		tDatas[threadID].outStart = buffer + width * (height / threads) * threadID; //Divide height of image into equal chunks for threads. Output start point is beginning of buffer plus however many pixels are being rendered by earlier threads
+		threadHandles[threadID] = CreateThread(NULL, 0, StartThread, &tDatas[threadID], 0, NULL);
+	}
+
+	WaitForMultipleObjects(threads, threadHandles, TRUE, INFINITE);
+}
 
 // read command line arguments, render, and write out BMP file
 int main(int argc, char* argv[])
