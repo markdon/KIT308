@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracer", "RayTracer\RayTracer.vcxproj", "{E8124ED2-2175-4F5B-9D11-E2F6EDFE81D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial02_CThreadedMandelbrot", "Tutorial02_CThreadedMandelbrot\Tutorial02_CThreadedMandelbrot.vcxproj", "{F30F0877-A49A-4B56-B0D8-293BE18B9A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8124ED2-2175-4F5B-9D11-E2F6EDFE81D8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8124ED2-2175-4F5B-9D11-E2F6EDFE81D8}.Debug|Win32.Build.0 = Debug|Win32
+		{E8124ED2-2175-4F5B-9D11-E2F6EDFE81D8}.Release|Win32.ActiveCfg = Release|Win32
+		{E8124ED2-2175-4F5B-9D11-E2F6EDFE81D8}.Release|Win32.Build.0 = Release|Win32
+		{F30F0877-A49A-4B56-B0D8-293BE18B9A4B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F30F0877-A49A-4B56-B0D8-293BE18B9A4B}.Debug|Win32.Build.0 = Debug|Win32
+		{F30F0877-A49A-4B56-B0D8-293BE18B9A4B}.Release|Win32.ActiveCfg = Release|Win32
+		{F30F0877-A49A-4B56-B0D8-293BE18B9A4B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

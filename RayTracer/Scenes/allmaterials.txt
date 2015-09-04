@@ -1,0 +1,306 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = 0.0, 0.0, 100.0;
+	Camera.Rotation = 0.0;
+	Camera.FieldOfView = 90.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 16;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 17;
+	NumberOfSpheres = 15;
+	NumberOfBlobs = 0;
+	NumberOfLights = 2;
+	NumberOfPlanes = 1;
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+
+Material0
+{
+	Type = checkerboard;
+	Wrapping = planar_xy;
+	Diffuse = 1.00, 0.75, 0.75;
+	Diffuse2 = 0.5, 0.9, 0.5;
+	Size = 10;
+}
+
+Material1
+{
+	Type = checkerboard;
+	Wrapping = planar_xz;
+	Diffuse = 0.75, 0.75, 0.75;
+	Diffuse2 = 0.25, 0.25, 0.25;
+	Size = 10;
+}
+
+Material2
+{
+	Type = checkerboard;
+	Wrapping = planar_yz;
+	Diffuse = 0.0, 1.0, 0.0;
+	Diffuse2 = 1.0, 1.0, 0.0;
+	Size = 10;
+}
+
+Material3
+{
+	Type = checkerboard;
+	Wrapping = spherical;
+	Diffuse = 0.9, 0.9, 0.9;   
+	Diffuse2 = 0.7, 0.0, 0.0;    
+	Size = 10;
+}
+
+Material4
+{
+	Type = checkerboard;
+	Wrapping = volume;
+	Diffuse = 0.00, 0.0, 0.9;
+	Diffuse2 = 0.9, 0.9, 0.0;
+	Size = 10;
+}
+
+Material5
+{
+	Type = texture;
+	Wrapping = planar_xy;
+	Texture = Textures/floortilemap.bmp;
+	Size = 100;
+}
+
+Material6
+{
+	Type = texture;
+	Wrapping = planar_xz;
+	Texture = Textures/floortilemap.bmp;
+	Size = 100;
+}
+
+Material7
+{
+	Type = texture;
+	Wrapping = planar_yz;
+	Texture = Textures/floortilemap.bmp;
+	Size = 100;
+}
+
+Material8
+{
+	Type = texture;
+	Wrapping = spherical;
+	Texture = Textures/earthmap1k.bmp;
+}
+
+Material9
+{
+	Type = texture;
+	Wrapping = cubemap;
+	Texture = Textures/floortilemap.bmp;
+}
+
+Material10
+{
+	Type = gouraud;
+	Diffuse = 0.75, 0.25, 0.25;
+}
+
+Material11
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 1.00;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 60;
+}
+
+Material12
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 0.25;
+	Reflection = 0.8;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 60;
+}
+
+Material13
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 0.25;
+	Refraction = 0.8;
+	Density = 2.0;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 60;
+}
+
+Material14
+{
+	Type = gouraud;
+	Diffuse = 0.0, 0.0, 0.0;
+	Specular = 1.5, 1.5, 1.5;
+	Power = 100;
+}
+
+Material15
+{
+	Type = checkerboard;
+	Wrapping = planar_xy;
+	Diffuse = 0.1, 0.1, 0.7;
+	Diffuse2 = 0.7, 0.7, 1.00;
+	Size = 100;
+}
+
+Material16
+{
+	Type = gouraud;
+	Diffuse = 0.0, 0.0, 0.0;
+}
+
+
+///////////////////////////////////////
+//         List of planes            //
+/////////////////////////////////////// 
+
+Plane0
+{
+	Center = 0.0, 0.0, 500.0;
+	Normal = 0.0, 0.0, -1.0;
+	Material.Id = 15;
+}
+
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+  Center = -200.0, -100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 0;
+}
+Sphere1
+{
+  Center = -100.0, -100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 1;
+}
+Sphere2
+{
+  Center = 0.0, -100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 2;
+}
+Sphere3
+{
+  Center = 100.0, -100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 3;
+}
+Sphere4
+{
+  Center = 200.0, -100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 4;
+}
+Sphere5
+{
+  Center = -200.0, 0.0, 400.0;
+  Size = 45.0;
+  Material.Id = 5;
+}
+Sphere6
+{
+  Center = -100.0, 0.0, 400.0;
+  Size = 45.0;
+  Material.Id = 6;
+}
+Sphere7
+{
+  Center = 0.0, 0.0, 400.0;
+  Size = 45.0;
+  Material.Id = 7;
+}
+Sphere8
+{
+  Center = 100.0, 0.0, 400.0;
+  Size = 45.0;
+  Material.Id = 8;
+}
+Sphere9
+{
+  Center = 200.0, 0.0, 400.0;
+  Size = 45.0;
+  Material.Id = 9;
+}
+Sphere10
+{
+  Center = -200.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 10;
+}
+Sphere11
+{
+  Center = -100.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 11;
+}
+Sphere12
+{
+  Center = 0.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 12;
+}
+Sphere13
+{
+  Center = 100.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 13;
+}
+Sphere14
+{
+  Center = 200.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 14;
+}
+
+
+///////////////////////////////////////
+//         List of blobs           //
+/////////////////////////////////////// 
+
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+Light0
+{
+  Position = 1000.0, 1000.0, -4000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+
+Light1
+{
+  Position = -200.0, 100.0, 450.0;
+  Intensity = 0.25, 0.25, 0.25;
+}
+
+

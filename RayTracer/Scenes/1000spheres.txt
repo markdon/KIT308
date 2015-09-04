@@ -1,0 +1,6063 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = 9.5, 2.5, -10.0;
+	Camera.Rotation = 0.0;
+	Camera.FieldOfView = 60.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 1;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 2;
+	NumberOfSpheres = 1000;
+	NumberOfBlobs = 0;
+	NumberOfLights = 1; 
+	NumberOfPlanes = 0;
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+
+Material0
+{
+	Diffuse = 0.75, 0.75, 0.75;
+
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+	Reflection = 0.1;
+}
+Material1 // Skybox
+{
+	Diffuse = 0.0, 0.0, 0.0;
+}
+	
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+Light0
+{
+  Position = 10.0, 9.5, 30.0;
+  Intensity = 3, 3, 3;
+}
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+        Center = 0, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere1
+{
+        Center = 0, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere2
+{
+        Center = 0, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere3
+{
+        Center = 0, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere4
+{
+        Center = 0, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere5
+{
+        Center = 0, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere6
+{
+        Center = 0, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere7
+{
+        Center = 0, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere8
+{
+        Center = 0, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere9
+{
+        Center = 0, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere10
+{
+        Center = 0, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere11
+{
+        Center = 0, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere12
+{
+        Center = 0, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere13
+{
+        Center = 0, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere14
+{
+        Center = 0, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere15
+{
+        Center = 0, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere16
+{
+        Center = 0, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere17
+{
+        Center = 0, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere18
+{
+        Center = 0, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere19
+{
+        Center = 0, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere20
+{
+        Center = 0, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere21
+{
+        Center = 0, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere22
+{
+        Center = 0, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere23
+{
+        Center = 0, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere24
+{
+        Center = 0, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere25
+{
+        Center = 0, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere26
+{
+        Center = 0, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere27
+{
+        Center = 0, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere28
+{
+        Center = 0, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere29
+{
+        Center = 0, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere30
+{
+        Center = 0, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere31
+{
+        Center = 0, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere32
+{
+        Center = 0, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere33
+{
+        Center = 0, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere34
+{
+        Center = 0, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere35
+{
+        Center = 0, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere36
+{
+        Center = 0, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere37
+{
+        Center = 0, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere38
+{
+        Center = 0, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere39
+{
+        Center = 0, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere40
+{
+        Center = 0, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere41
+{
+        Center = 0, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere42
+{
+        Center = 0, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere43
+{
+        Center = 0, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere44
+{
+        Center = 0, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere45
+{
+        Center = 0, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere46
+{
+        Center = 0, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere47
+{
+        Center = 0, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere48
+{
+        Center = 0, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere49
+{
+        Center = 0, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere50
+{
+        Center = 1, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere51
+{
+        Center = 1, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere52
+{
+        Center = 1, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere53
+{
+        Center = 1, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere54
+{
+        Center = 1, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere55
+{
+        Center = 1, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere56
+{
+        Center = 1, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere57
+{
+        Center = 1, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere58
+{
+        Center = 1, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere59
+{
+        Center = 1, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere60
+{
+        Center = 1, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere61
+{
+        Center = 1, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere62
+{
+        Center = 1, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere63
+{
+        Center = 1, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere64
+{
+        Center = 1, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere65
+{
+        Center = 1, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere66
+{
+        Center = 1, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere67
+{
+        Center = 1, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere68
+{
+        Center = 1, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere69
+{
+        Center = 1, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere70
+{
+        Center = 1, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere71
+{
+        Center = 1, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere72
+{
+        Center = 1, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere73
+{
+        Center = 1, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere74
+{
+        Center = 1, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere75
+{
+        Center = 1, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere76
+{
+        Center = 1, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere77
+{
+        Center = 1, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere78
+{
+        Center = 1, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere79
+{
+        Center = 1, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere80
+{
+        Center = 1, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere81
+{
+        Center = 1, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere82
+{
+        Center = 1, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere83
+{
+        Center = 1, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere84
+{
+        Center = 1, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere85
+{
+        Center = 1, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere86
+{
+        Center = 1, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere87
+{
+        Center = 1, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere88
+{
+        Center = 1, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere89
+{
+        Center = 1, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere90
+{
+        Center = 1, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere91
+{
+        Center = 1, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere92
+{
+        Center = 1, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere93
+{
+        Center = 1, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere94
+{
+        Center = 1, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere95
+{
+        Center = 1, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere96
+{
+        Center = 1, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere97
+{
+        Center = 1, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere98
+{
+        Center = 1, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere99
+{
+        Center = 1, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere100
+{
+        Center = 2, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere101
+{
+        Center = 2, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere102
+{
+        Center = 2, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere103
+{
+        Center = 2, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere104
+{
+        Center = 2, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere105
+{
+        Center = 2, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere106
+{
+        Center = 2, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere107
+{
+        Center = 2, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere108
+{
+        Center = 2, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere109
+{
+        Center = 2, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere110
+{
+        Center = 2, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere111
+{
+        Center = 2, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere112
+{
+        Center = 2, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere113
+{
+        Center = 2, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere114
+{
+        Center = 2, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere115
+{
+        Center = 2, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere116
+{
+        Center = 2, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere117
+{
+        Center = 2, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere118
+{
+        Center = 2, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere119
+{
+        Center = 2, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere120
+{
+        Center = 2, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere121
+{
+        Center = 2, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere122
+{
+        Center = 2, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere123
+{
+        Center = 2, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere124
+{
+        Center = 2, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere125
+{
+        Center = 2, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere126
+{
+        Center = 2, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere127
+{
+        Center = 2, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere128
+{
+        Center = 2, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere129
+{
+        Center = 2, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere130
+{
+        Center = 2, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere131
+{
+        Center = 2, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere132
+{
+        Center = 2, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere133
+{
+        Center = 2, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere134
+{
+        Center = 2, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere135
+{
+        Center = 2, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere136
+{
+        Center = 2, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere137
+{
+        Center = 2, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere138
+{
+        Center = 2, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere139
+{
+        Center = 2, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere140
+{
+        Center = 2, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere141
+{
+        Center = 2, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere142
+{
+        Center = 2, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere143
+{
+        Center = 2, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere144
+{
+        Center = 2, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere145
+{
+        Center = 2, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere146
+{
+        Center = 2, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere147
+{
+        Center = 2, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere148
+{
+        Center = 2, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere149
+{
+        Center = 2, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere150
+{
+        Center = 3, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere151
+{
+        Center = 3, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere152
+{
+        Center = 3, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere153
+{
+        Center = 3, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere154
+{
+        Center = 3, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere155
+{
+        Center = 3, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere156
+{
+        Center = 3, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere157
+{
+        Center = 3, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere158
+{
+        Center = 3, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere159
+{
+        Center = 3, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere160
+{
+        Center = 3, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere161
+{
+        Center = 3, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere162
+{
+        Center = 3, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere163
+{
+        Center = 3, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere164
+{
+        Center = 3, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere165
+{
+        Center = 3, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere166
+{
+        Center = 3, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere167
+{
+        Center = 3, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere168
+{
+        Center = 3, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere169
+{
+        Center = 3, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere170
+{
+        Center = 3, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere171
+{
+        Center = 3, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere172
+{
+        Center = 3, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere173
+{
+        Center = 3, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere174
+{
+        Center = 3, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere175
+{
+        Center = 3, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere176
+{
+        Center = 3, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere177
+{
+        Center = 3, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere178
+{
+        Center = 3, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere179
+{
+        Center = 3, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere180
+{
+        Center = 3, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere181
+{
+        Center = 3, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere182
+{
+        Center = 3, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere183
+{
+        Center = 3, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere184
+{
+        Center = 3, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere185
+{
+        Center = 3, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere186
+{
+        Center = 3, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere187
+{
+        Center = 3, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere188
+{
+        Center = 3, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere189
+{
+        Center = 3, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere190
+{
+        Center = 3, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere191
+{
+        Center = 3, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere192
+{
+        Center = 3, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere193
+{
+        Center = 3, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere194
+{
+        Center = 3, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere195
+{
+        Center = 3, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere196
+{
+        Center = 3, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere197
+{
+        Center = 3, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere198
+{
+        Center = 3, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere199
+{
+        Center = 3, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere200
+{
+        Center = 4, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere201
+{
+        Center = 4, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere202
+{
+        Center = 4, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere203
+{
+        Center = 4, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere204
+{
+        Center = 4, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere205
+{
+        Center = 4, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere206
+{
+        Center = 4, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere207
+{
+        Center = 4, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere208
+{
+        Center = 4, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere209
+{
+        Center = 4, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere210
+{
+        Center = 4, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere211
+{
+        Center = 4, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere212
+{
+        Center = 4, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere213
+{
+        Center = 4, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere214
+{
+        Center = 4, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere215
+{
+        Center = 4, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere216
+{
+        Center = 4, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere217
+{
+        Center = 4, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere218
+{
+        Center = 4, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere219
+{
+        Center = 4, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere220
+{
+        Center = 4, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere221
+{
+        Center = 4, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere222
+{
+        Center = 4, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere223
+{
+        Center = 4, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere224
+{
+        Center = 4, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere225
+{
+        Center = 4, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere226
+{
+        Center = 4, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere227
+{
+        Center = 4, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere228
+{
+        Center = 4, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere229
+{
+        Center = 4, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere230
+{
+        Center = 4, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere231
+{
+        Center = 4, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere232
+{
+        Center = 4, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere233
+{
+        Center = 4, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere234
+{
+        Center = 4, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere235
+{
+        Center = 4, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere236
+{
+        Center = 4, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere237
+{
+        Center = 4, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere238
+{
+        Center = 4, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere239
+{
+        Center = 4, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere240
+{
+        Center = 4, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere241
+{
+        Center = 4, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere242
+{
+        Center = 4, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere243
+{
+        Center = 4, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere244
+{
+        Center = 4, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere245
+{
+        Center = 4, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere246
+{
+        Center = 4, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere247
+{
+        Center = 4, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere248
+{
+        Center = 4, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere249
+{
+        Center = 4, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere250
+{
+        Center = 5, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere251
+{
+        Center = 5, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere252
+{
+        Center = 5, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere253
+{
+        Center = 5, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere254
+{
+        Center = 5, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere255
+{
+        Center = 5, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere256
+{
+        Center = 5, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere257
+{
+        Center = 5, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere258
+{
+        Center = 5, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere259
+{
+        Center = 5, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere260
+{
+        Center = 5, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere261
+{
+        Center = 5, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere262
+{
+        Center = 5, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere263
+{
+        Center = 5, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere264
+{
+        Center = 5, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere265
+{
+        Center = 5, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere266
+{
+        Center = 5, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere267
+{
+        Center = 5, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere268
+{
+        Center = 5, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere269
+{
+        Center = 5, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere270
+{
+        Center = 5, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere271
+{
+        Center = 5, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere272
+{
+        Center = 5, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere273
+{
+        Center = 5, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere274
+{
+        Center = 5, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere275
+{
+        Center = 5, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere276
+{
+        Center = 5, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere277
+{
+        Center = 5, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere278
+{
+        Center = 5, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere279
+{
+        Center = 5, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere280
+{
+        Center = 5, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere281
+{
+        Center = 5, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere282
+{
+        Center = 5, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere283
+{
+        Center = 5, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere284
+{
+        Center = 5, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere285
+{
+        Center = 5, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere286
+{
+        Center = 5, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere287
+{
+        Center = 5, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere288
+{
+        Center = 5, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere289
+{
+        Center = 5, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere290
+{
+        Center = 5, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere291
+{
+        Center = 5, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere292
+{
+        Center = 5, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere293
+{
+        Center = 5, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere294
+{
+        Center = 5, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere295
+{
+        Center = 5, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere296
+{
+        Center = 5, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere297
+{
+        Center = 5, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere298
+{
+        Center = 5, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere299
+{
+        Center = 5, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere300
+{
+        Center = 6, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere301
+{
+        Center = 6, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere302
+{
+        Center = 6, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere303
+{
+        Center = 6, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere304
+{
+        Center = 6, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere305
+{
+        Center = 6, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere306
+{
+        Center = 6, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere307
+{
+        Center = 6, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere308
+{
+        Center = 6, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere309
+{
+        Center = 6, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere310
+{
+        Center = 6, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere311
+{
+        Center = 6, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere312
+{
+        Center = 6, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere313
+{
+        Center = 6, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere314
+{
+        Center = 6, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere315
+{
+        Center = 6, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere316
+{
+        Center = 6, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere317
+{
+        Center = 6, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere318
+{
+        Center = 6, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere319
+{
+        Center = 6, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere320
+{
+        Center = 6, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere321
+{
+        Center = 6, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere322
+{
+        Center = 6, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere323
+{
+        Center = 6, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere324
+{
+        Center = 6, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere325
+{
+        Center = 6, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere326
+{
+        Center = 6, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere327
+{
+        Center = 6, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere328
+{
+        Center = 6, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere329
+{
+        Center = 6, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere330
+{
+        Center = 6, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere331
+{
+        Center = 6, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere332
+{
+        Center = 6, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere333
+{
+        Center = 6, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere334
+{
+        Center = 6, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere335
+{
+        Center = 6, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere336
+{
+        Center = 6, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere337
+{
+        Center = 6, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere338
+{
+        Center = 6, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere339
+{
+        Center = 6, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere340
+{
+        Center = 6, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere341
+{
+        Center = 6, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere342
+{
+        Center = 6, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere343
+{
+        Center = 6, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere344
+{
+        Center = 6, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere345
+{
+        Center = 6, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere346
+{
+        Center = 6, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere347
+{
+        Center = 6, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere348
+{
+        Center = 6, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere349
+{
+        Center = 6, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere350
+{
+        Center = 7, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere351
+{
+        Center = 7, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere352
+{
+        Center = 7, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere353
+{
+        Center = 7, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere354
+{
+        Center = 7, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere355
+{
+        Center = 7, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere356
+{
+        Center = 7, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere357
+{
+        Center = 7, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere358
+{
+        Center = 7, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere359
+{
+        Center = 7, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere360
+{
+        Center = 7, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere361
+{
+        Center = 7, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere362
+{
+        Center = 7, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere363
+{
+        Center = 7, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere364
+{
+        Center = 7, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere365
+{
+        Center = 7, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere366
+{
+        Center = 7, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere367
+{
+        Center = 7, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere368
+{
+        Center = 7, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere369
+{
+        Center = 7, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere370
+{
+        Center = 7, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere371
+{
+        Center = 7, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere372
+{
+        Center = 7, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere373
+{
+        Center = 7, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere374
+{
+        Center = 7, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere375
+{
+        Center = 7, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere376
+{
+        Center = 7, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere377
+{
+        Center = 7, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere378
+{
+        Center = 7, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere379
+{
+        Center = 7, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere380
+{
+        Center = 7, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere381
+{
+        Center = 7, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere382
+{
+        Center = 7, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere383
+{
+        Center = 7, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere384
+{
+        Center = 7, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere385
+{
+        Center = 7, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere386
+{
+        Center = 7, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere387
+{
+        Center = 7, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere388
+{
+        Center = 7, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere389
+{
+        Center = 7, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere390
+{
+        Center = 7, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere391
+{
+        Center = 7, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere392
+{
+        Center = 7, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere393
+{
+        Center = 7, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere394
+{
+        Center = 7, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere395
+{
+        Center = 7, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere396
+{
+        Center = 7, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere397
+{
+        Center = 7, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere398
+{
+        Center = 7, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere399
+{
+        Center = 7, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere400
+{
+        Center = 8, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere401
+{
+        Center = 8, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere402
+{
+        Center = 8, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere403
+{
+        Center = 8, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere404
+{
+        Center = 8, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere405
+{
+        Center = 8, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere406
+{
+        Center = 8, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere407
+{
+        Center = 8, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere408
+{
+        Center = 8, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere409
+{
+        Center = 8, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere410
+{
+        Center = 8, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere411
+{
+        Center = 8, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere412
+{
+        Center = 8, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere413
+{
+        Center = 8, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere414
+{
+        Center = 8, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere415
+{
+        Center = 8, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere416
+{
+        Center = 8, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere417
+{
+        Center = 8, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere418
+{
+        Center = 8, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere419
+{
+        Center = 8, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere420
+{
+        Center = 8, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere421
+{
+        Center = 8, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere422
+{
+        Center = 8, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere423
+{
+        Center = 8, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere424
+{
+        Center = 8, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere425
+{
+        Center = 8, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere426
+{
+        Center = 8, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere427
+{
+        Center = 8, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere428
+{
+        Center = 8, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere429
+{
+        Center = 8, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere430
+{
+        Center = 8, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere431
+{
+        Center = 8, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere432
+{
+        Center = 8, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere433
+{
+        Center = 8, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere434
+{
+        Center = 8, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere435
+{
+        Center = 8, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere436
+{
+        Center = 8, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere437
+{
+        Center = 8, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere438
+{
+        Center = 8, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere439
+{
+        Center = 8, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere440
+{
+        Center = 8, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere441
+{
+        Center = 8, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere442
+{
+        Center = 8, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere443
+{
+        Center = 8, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere444
+{
+        Center = 8, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere445
+{
+        Center = 8, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere446
+{
+        Center = 8, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere447
+{
+        Center = 8, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere448
+{
+        Center = 8, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere449
+{
+        Center = 8, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere450
+{
+        Center = 9, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere451
+{
+        Center = 9, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere452
+{
+        Center = 9, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere453
+{
+        Center = 9, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere454
+{
+        Center = 9, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere455
+{
+        Center = 9, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere456
+{
+        Center = 9, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere457
+{
+        Center = 9, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere458
+{
+        Center = 9, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere459
+{
+        Center = 9, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere460
+{
+        Center = 9, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere461
+{
+        Center = 9, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere462
+{
+        Center = 9, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere463
+{
+        Center = 9, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere464
+{
+        Center = 9, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere465
+{
+        Center = 9, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere466
+{
+        Center = 9, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere467
+{
+        Center = 9, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere468
+{
+        Center = 9, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere469
+{
+        Center = 9, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere470
+{
+        Center = 9, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere471
+{
+        Center = 9, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere472
+{
+        Center = 9, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere473
+{
+        Center = 9, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere474
+{
+        Center = 9, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere475
+{
+        Center = 9, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere476
+{
+        Center = 9, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere477
+{
+        Center = 9, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere478
+{
+        Center = 9, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere479
+{
+        Center = 9, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere480
+{
+        Center = 9, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere481
+{
+        Center = 9, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere482
+{
+        Center = 9, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere483
+{
+        Center = 9, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere484
+{
+        Center = 9, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere485
+{
+        Center = 9, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere486
+{
+        Center = 9, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere487
+{
+        Center = 9, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere488
+{
+        Center = 9, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere489
+{
+        Center = 9, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere490
+{
+        Center = 9, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere491
+{
+        Center = 9, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere492
+{
+        Center = 9, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere493
+{
+        Center = 9, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere494
+{
+        Center = 9, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere495
+{
+        Center = 9, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere496
+{
+        Center = 9, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere497
+{
+        Center = 9, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere498
+{
+        Center = 9, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere499
+{
+        Center = 9, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere500
+{
+        Center = 10, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere501
+{
+        Center = 10, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere502
+{
+        Center = 10, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere503
+{
+        Center = 10, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere504
+{
+        Center = 10, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere505
+{
+        Center = 10, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere506
+{
+        Center = 10, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere507
+{
+        Center = 10, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere508
+{
+        Center = 10, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere509
+{
+        Center = 10, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere510
+{
+        Center = 10, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere511
+{
+        Center = 10, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere512
+{
+        Center = 10, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere513
+{
+        Center = 10, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere514
+{
+        Center = 10, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere515
+{
+        Center = 10, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere516
+{
+        Center = 10, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere517
+{
+        Center = 10, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere518
+{
+        Center = 10, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere519
+{
+        Center = 10, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere520
+{
+        Center = 10, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere521
+{
+        Center = 10, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere522
+{
+        Center = 10, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere523
+{
+        Center = 10, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere524
+{
+        Center = 10, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere525
+{
+        Center = 10, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere526
+{
+        Center = 10, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere527
+{
+        Center = 10, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere528
+{
+        Center = 10, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere529
+{
+        Center = 10, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere530
+{
+        Center = 10, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere531
+{
+        Center = 10, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere532
+{
+        Center = 10, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere533
+{
+        Center = 10, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere534
+{
+        Center = 10, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere535
+{
+        Center = 10, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere536
+{
+        Center = 10, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere537
+{
+        Center = 10, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere538
+{
+        Center = 10, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere539
+{
+        Center = 10, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere540
+{
+        Center = 10, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere541
+{
+        Center = 10, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere542
+{
+        Center = 10, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere543
+{
+        Center = 10, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere544
+{
+        Center = 10, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere545
+{
+        Center = 10, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere546
+{
+        Center = 10, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere547
+{
+        Center = 10, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere548
+{
+        Center = 10, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere549
+{
+        Center = 10, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere550
+{
+        Center = 11, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere551
+{
+        Center = 11, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere552
+{
+        Center = 11, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere553
+{
+        Center = 11, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere554
+{
+        Center = 11, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere555
+{
+        Center = 11, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere556
+{
+        Center = 11, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere557
+{
+        Center = 11, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere558
+{
+        Center = 11, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere559
+{
+        Center = 11, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere560
+{
+        Center = 11, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere561
+{
+        Center = 11, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere562
+{
+        Center = 11, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere563
+{
+        Center = 11, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere564
+{
+        Center = 11, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere565
+{
+        Center = 11, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere566
+{
+        Center = 11, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere567
+{
+        Center = 11, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere568
+{
+        Center = 11, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere569
+{
+        Center = 11, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere570
+{
+        Center = 11, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere571
+{
+        Center = 11, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere572
+{
+        Center = 11, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere573
+{
+        Center = 11, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere574
+{
+        Center = 11, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere575
+{
+        Center = 11, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere576
+{
+        Center = 11, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere577
+{
+        Center = 11, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere578
+{
+        Center = 11, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere579
+{
+        Center = 11, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere580
+{
+        Center = 11, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere581
+{
+        Center = 11, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere582
+{
+        Center = 11, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere583
+{
+        Center = 11, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere584
+{
+        Center = 11, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere585
+{
+        Center = 11, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere586
+{
+        Center = 11, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere587
+{
+        Center = 11, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere588
+{
+        Center = 11, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere589
+{
+        Center = 11, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere590
+{
+        Center = 11, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere591
+{
+        Center = 11, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere592
+{
+        Center = 11, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere593
+{
+        Center = 11, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere594
+{
+        Center = 11, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere595
+{
+        Center = 11, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere596
+{
+        Center = 11, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere597
+{
+        Center = 11, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere598
+{
+        Center = 11, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere599
+{
+        Center = 11, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere600
+{
+        Center = 12, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere601
+{
+        Center = 12, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere602
+{
+        Center = 12, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere603
+{
+        Center = 12, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere604
+{
+        Center = 12, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere605
+{
+        Center = 12, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere606
+{
+        Center = 12, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere607
+{
+        Center = 12, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere608
+{
+        Center = 12, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere609
+{
+        Center = 12, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere610
+{
+        Center = 12, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere611
+{
+        Center = 12, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere612
+{
+        Center = 12, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere613
+{
+        Center = 12, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere614
+{
+        Center = 12, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere615
+{
+        Center = 12, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere616
+{
+        Center = 12, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere617
+{
+        Center = 12, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere618
+{
+        Center = 12, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere619
+{
+        Center = 12, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere620
+{
+        Center = 12, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere621
+{
+        Center = 12, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere622
+{
+        Center = 12, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere623
+{
+        Center = 12, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere624
+{
+        Center = 12, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere625
+{
+        Center = 12, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere626
+{
+        Center = 12, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere627
+{
+        Center = 12, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere628
+{
+        Center = 12, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere629
+{
+        Center = 12, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere630
+{
+        Center = 12, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere631
+{
+        Center = 12, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere632
+{
+        Center = 12, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere633
+{
+        Center = 12, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere634
+{
+        Center = 12, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere635
+{
+        Center = 12, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere636
+{
+        Center = 12, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere637
+{
+        Center = 12, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere638
+{
+        Center = 12, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere639
+{
+        Center = 12, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere640
+{
+        Center = 12, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere641
+{
+        Center = 12, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere642
+{
+        Center = 12, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere643
+{
+        Center = 12, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere644
+{
+        Center = 12, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere645
+{
+        Center = 12, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere646
+{
+        Center = 12, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere647
+{
+        Center = 12, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere648
+{
+        Center = 12, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere649
+{
+        Center = 12, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere650
+{
+        Center = 13, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere651
+{
+        Center = 13, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere652
+{
+        Center = 13, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere653
+{
+        Center = 13, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere654
+{
+        Center = 13, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere655
+{
+        Center = 13, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere656
+{
+        Center = 13, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere657
+{
+        Center = 13, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere658
+{
+        Center = 13, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere659
+{
+        Center = 13, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere660
+{
+        Center = 13, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere661
+{
+        Center = 13, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere662
+{
+        Center = 13, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere663
+{
+        Center = 13, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere664
+{
+        Center = 13, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere665
+{
+        Center = 13, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere666
+{
+        Center = 13, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere667
+{
+        Center = 13, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere668
+{
+        Center = 13, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere669
+{
+        Center = 13, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere670
+{
+        Center = 13, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere671
+{
+        Center = 13, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere672
+{
+        Center = 13, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere673
+{
+        Center = 13, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere674
+{
+        Center = 13, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere675
+{
+        Center = 13, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere676
+{
+        Center = 13, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere677
+{
+        Center = 13, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere678
+{
+        Center = 13, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere679
+{
+        Center = 13, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere680
+{
+        Center = 13, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere681
+{
+        Center = 13, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere682
+{
+        Center = 13, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere683
+{
+        Center = 13, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere684
+{
+        Center = 13, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere685
+{
+        Center = 13, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere686
+{
+        Center = 13, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere687
+{
+        Center = 13, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere688
+{
+        Center = 13, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere689
+{
+        Center = 13, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere690
+{
+        Center = 13, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere691
+{
+        Center = 13, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere692
+{
+        Center = 13, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere693
+{
+        Center = 13, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere694
+{
+        Center = 13, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere695
+{
+        Center = 13, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere696
+{
+        Center = 13, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere697
+{
+        Center = 13, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere698
+{
+        Center = 13, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere699
+{
+        Center = 13, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere700
+{
+        Center = 14, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere701
+{
+        Center = 14, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere702
+{
+        Center = 14, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere703
+{
+        Center = 14, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere704
+{
+        Center = 14, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere705
+{
+        Center = 14, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere706
+{
+        Center = 14, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere707
+{
+        Center = 14, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere708
+{
+        Center = 14, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere709
+{
+        Center = 14, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere710
+{
+        Center = 14, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere711
+{
+        Center = 14, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere712
+{
+        Center = 14, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere713
+{
+        Center = 14, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere714
+{
+        Center = 14, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere715
+{
+        Center = 14, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere716
+{
+        Center = 14, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere717
+{
+        Center = 14, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere718
+{
+        Center = 14, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere719
+{
+        Center = 14, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere720
+{
+        Center = 14, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere721
+{
+        Center = 14, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere722
+{
+        Center = 14, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere723
+{
+        Center = 14, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere724
+{
+        Center = 14, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere725
+{
+        Center = 14, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere726
+{
+        Center = 14, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere727
+{
+        Center = 14, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere728
+{
+        Center = 14, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere729
+{
+        Center = 14, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere730
+{
+        Center = 14, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere731
+{
+        Center = 14, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere732
+{
+        Center = 14, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere733
+{
+        Center = 14, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere734
+{
+        Center = 14, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere735
+{
+        Center = 14, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere736
+{
+        Center = 14, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere737
+{
+        Center = 14, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere738
+{
+        Center = 14, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere739
+{
+        Center = 14, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere740
+{
+        Center = 14, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere741
+{
+        Center = 14, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere742
+{
+        Center = 14, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere743
+{
+        Center = 14, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere744
+{
+        Center = 14, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere745
+{
+        Center = 14, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere746
+{
+        Center = 14, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere747
+{
+        Center = 14, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere748
+{
+        Center = 14, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere749
+{
+        Center = 14, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere750
+{
+        Center = 15, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere751
+{
+        Center = 15, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere752
+{
+        Center = 15, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere753
+{
+        Center = 15, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere754
+{
+        Center = 15, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere755
+{
+        Center = 15, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere756
+{
+        Center = 15, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere757
+{
+        Center = 15, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere758
+{
+        Center = 15, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere759
+{
+        Center = 15, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere760
+{
+        Center = 15, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere761
+{
+        Center = 15, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere762
+{
+        Center = 15, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere763
+{
+        Center = 15, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere764
+{
+        Center = 15, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere765
+{
+        Center = 15, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere766
+{
+        Center = 15, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere767
+{
+        Center = 15, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere768
+{
+        Center = 15, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere769
+{
+        Center = 15, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere770
+{
+        Center = 15, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere771
+{
+        Center = 15, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere772
+{
+        Center = 15, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere773
+{
+        Center = 15, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere774
+{
+        Center = 15, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere775
+{
+        Center = 15, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere776
+{
+        Center = 15, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere777
+{
+        Center = 15, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere778
+{
+        Center = 15, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere779
+{
+        Center = 15, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere780
+{
+        Center = 15, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere781
+{
+        Center = 15, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere782
+{
+        Center = 15, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere783
+{
+        Center = 15, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere784
+{
+        Center = 15, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere785
+{
+        Center = 15, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere786
+{
+        Center = 15, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere787
+{
+        Center = 15, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere788
+{
+        Center = 15, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere789
+{
+        Center = 15, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere790
+{
+        Center = 15, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere791
+{
+        Center = 15, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere792
+{
+        Center = 15, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere793
+{
+        Center = 15, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere794
+{
+        Center = 15, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere795
+{
+        Center = 15, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere796
+{
+        Center = 15, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere797
+{
+        Center = 15, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere798
+{
+        Center = 15, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere799
+{
+        Center = 15, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere800
+{
+        Center = 16, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere801
+{
+        Center = 16, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere802
+{
+        Center = 16, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere803
+{
+        Center = 16, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere804
+{
+        Center = 16, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere805
+{
+        Center = 16, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere806
+{
+        Center = 16, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere807
+{
+        Center = 16, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere808
+{
+        Center = 16, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere809
+{
+        Center = 16, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere810
+{
+        Center = 16, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere811
+{
+        Center = 16, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere812
+{
+        Center = 16, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere813
+{
+        Center = 16, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere814
+{
+        Center = 16, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere815
+{
+        Center = 16, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere816
+{
+        Center = 16, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere817
+{
+        Center = 16, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere818
+{
+        Center = 16, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere819
+{
+        Center = 16, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere820
+{
+        Center = 16, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere821
+{
+        Center = 16, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere822
+{
+        Center = 16, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere823
+{
+        Center = 16, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere824
+{
+        Center = 16, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere825
+{
+        Center = 16, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere826
+{
+        Center = 16, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere827
+{
+        Center = 16, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere828
+{
+        Center = 16, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere829
+{
+        Center = 16, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere830
+{
+        Center = 16, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere831
+{
+        Center = 16, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere832
+{
+        Center = 16, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere833
+{
+        Center = 16, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere834
+{
+        Center = 16, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere835
+{
+        Center = 16, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere836
+{
+        Center = 16, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere837
+{
+        Center = 16, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere838
+{
+        Center = 16, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere839
+{
+        Center = 16, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere840
+{
+        Center = 16, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere841
+{
+        Center = 16, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere842
+{
+        Center = 16, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere843
+{
+        Center = 16, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere844
+{
+        Center = 16, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere845
+{
+        Center = 16, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere846
+{
+        Center = 16, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere847
+{
+        Center = 16, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere848
+{
+        Center = 16, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere849
+{
+        Center = 16, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere850
+{
+        Center = 17, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere851
+{
+        Center = 17, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere852
+{
+        Center = 17, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere853
+{
+        Center = 17, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere854
+{
+        Center = 17, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere855
+{
+        Center = 17, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere856
+{
+        Center = 17, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere857
+{
+        Center = 17, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere858
+{
+        Center = 17, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere859
+{
+        Center = 17, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere860
+{
+        Center = 17, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere861
+{
+        Center = 17, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere862
+{
+        Center = 17, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere863
+{
+        Center = 17, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere864
+{
+        Center = 17, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere865
+{
+        Center = 17, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere866
+{
+        Center = 17, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere867
+{
+        Center = 17, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere868
+{
+        Center = 17, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere869
+{
+        Center = 17, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere870
+{
+        Center = 17, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere871
+{
+        Center = 17, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere872
+{
+        Center = 17, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere873
+{
+        Center = 17, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere874
+{
+        Center = 17, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere875
+{
+        Center = 17, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere876
+{
+        Center = 17, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere877
+{
+        Center = 17, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere878
+{
+        Center = 17, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere879
+{
+        Center = 17, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere880
+{
+        Center = 17, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere881
+{
+        Center = 17, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere882
+{
+        Center = 17, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere883
+{
+        Center = 17, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere884
+{
+        Center = 17, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere885
+{
+        Center = 17, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere886
+{
+        Center = 17, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere887
+{
+        Center = 17, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere888
+{
+        Center = 17, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere889
+{
+        Center = 17, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere890
+{
+        Center = 17, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere891
+{
+        Center = 17, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere892
+{
+        Center = 17, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere893
+{
+        Center = 17, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere894
+{
+        Center = 17, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere895
+{
+        Center = 17, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere896
+{
+        Center = 17, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere897
+{
+        Center = 17, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere898
+{
+        Center = 17, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere899
+{
+        Center = 17, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere900
+{
+        Center = 18, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere901
+{
+        Center = 18, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere902
+{
+        Center = 18, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere903
+{
+        Center = 18, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere904
+{
+        Center = 18, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere905
+{
+        Center = 18, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere906
+{
+        Center = 18, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere907
+{
+        Center = 18, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere908
+{
+        Center = 18, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere909
+{
+        Center = 18, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere910
+{
+        Center = 18, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere911
+{
+        Center = 18, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere912
+{
+        Center = 18, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere913
+{
+        Center = 18, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere914
+{
+        Center = 18, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere915
+{
+        Center = 18, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere916
+{
+        Center = 18, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere917
+{
+        Center = 18, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere918
+{
+        Center = 18, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere919
+{
+        Center = 18, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere920
+{
+        Center = 18, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere921
+{
+        Center = 18, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere922
+{
+        Center = 18, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere923
+{
+        Center = 18, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere924
+{
+        Center = 18, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere925
+{
+        Center = 18, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere926
+{
+        Center = 18, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere927
+{
+        Center = 18, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere928
+{
+        Center = 18, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere929
+{
+        Center = 18, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere930
+{
+        Center = 18, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere931
+{
+        Center = 18, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere932
+{
+        Center = 18, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere933
+{
+        Center = 18, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere934
+{
+        Center = 18, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere935
+{
+        Center = 18, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere936
+{
+        Center = 18, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere937
+{
+        Center = 18, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere938
+{
+        Center = 18, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere939
+{
+        Center = 18, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere940
+{
+        Center = 18, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere941
+{
+        Center = 18, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere942
+{
+        Center = 18, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere943
+{
+        Center = 18, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere944
+{
+        Center = 18, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere945
+{
+        Center = 18, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere946
+{
+        Center = 18, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere947
+{
+        Center = 18, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere948
+{
+        Center = 18, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere949
+{
+        Center = 18, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere950
+{
+        Center = 19, 0.000000, 0;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere951
+{
+        Center = 19, 0.100000, 1;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere952
+{
+        Center = 19, 0.200000, 2;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere953
+{
+        Center = 19, 0.300000, 3;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere954
+{
+        Center = 19, 0.400000, 4;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere955
+{
+        Center = 19, 0.500000, 5;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere956
+{
+        Center = 19, 0.600000, 6;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere957
+{
+        Center = 19, 0.700000, 7;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere958
+{
+        Center = 19, 0.800000, 8;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere959
+{
+        Center = 19, 0.900000, 9;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere960
+{
+        Center = 19, 1.000000, 10;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere961
+{
+        Center = 19, 1.100000, 11;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere962
+{
+        Center = 19, 1.200000, 12;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere963
+{
+        Center = 19, 1.300000, 13;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere964
+{
+        Center = 19, 1.400000, 14;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere965
+{
+        Center = 19, 1.500000, 15;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere966
+{
+        Center = 19, 1.600000, 16;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere967
+{
+        Center = 19, 1.700000, 17;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere968
+{
+        Center = 19, 1.800000, 18;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere969
+{
+        Center = 19, 1.900000, 19;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere970
+{
+        Center = 19, 2.000000, 20;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere971
+{
+        Center = 19, 2.100000, 21;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere972
+{
+        Center = 19, 2.200000, 22;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere973
+{
+        Center = 19, 2.300000, 23;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere974
+{
+        Center = 19, 2.400000, 24;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere975
+{
+        Center = 19, 2.500000, 25;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere976
+{
+        Center = 19, 2.600000, 26;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere977
+{
+        Center = 19, 2.700000, 27;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere978
+{
+        Center = 19, 2.800000, 28;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere979
+{
+        Center = 19, 2.900000, 29;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere980
+{
+        Center = 19, 3.000000, 30;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere981
+{
+        Center = 19, 3.100000, 31;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere982
+{
+        Center = 19, 3.200000, 32;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere983
+{
+        Center = 19, 3.300000, 33;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere984
+{
+        Center = 19, 3.400000, 34;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere985
+{
+        Center = 19, 3.500000, 35;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere986
+{
+        Center = 19, 3.600000, 36;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere987
+{
+        Center = 19, 3.700000, 37;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere988
+{
+        Center = 19, 3.800000, 38;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere989
+{
+        Center = 19, 3.900000, 39;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere990
+{
+        Center = 19, 4.000000, 40;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere991
+{
+        Center = 19, 4.100000, 41;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere992
+{
+        Center = 19, 4.200000, 42;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere993
+{
+        Center = 19, 4.300000, 43;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere994
+{
+        Center = 19, 4.400000, 44;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere995
+{
+        Center = 19, 4.500000, 45;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere996
+{
+        Center = 19, 4.600000, 46;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere997
+{
+        Center = 19, 4.700000, 47;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere998
+{
+        Center = 19, 4.800000, 48;
+        Size = 0.4;
+        Material.Id = 0;
+}
+Sphere999
+{
+        Center = 19, 4.900000, 49;
+        Size = 0.4;
+        Material.Id = 0;
+}

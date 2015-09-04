@@ -1,0 +1,22 @@
+﻿Build started 4/09/2015 5:50:00 PM.
+     1>Project "C:\KIT308_Assignment1\RayTracer\RayTracer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Raytrace.cpp
+         Raytrace.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\KIT308_Assignment1\Release\RayTracer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\KIT308_Assignment1\Release\RayTracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\KIT308_Assignment1\Release\RayTracer.lib" /MACHINE:X86 /SAFESEH Release\Config.obj
+         Release\ImageIO.obj
+         Release\Intersection.obj
+         Release\Lighting.obj
+         Release\Raytrace.obj
+         Release\Scene.obj
+         Release\Texture.obj
+         Generating code
+         Finished generating code
+         All 529 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         RayTracer.vcxproj -> C:\KIT308_Assignment1\Release\RayTracer.exe
+     1>Done Building Project "C:\KIT308_Assignment1\RayTracer\RayTracer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.69
