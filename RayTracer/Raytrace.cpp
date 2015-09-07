@@ -21,7 +21,7 @@ typedef struct {
 	unsigned int width;		//The amount of pixels in each row
 	unsigned int height;	//Amount of rows this thread will render
 	unsigned int* outStart;	//Pointer to position in buffer to start writing
-	int yOffset;			//Offset the rows of the scene to render
+	int yOffset;			//Amount of lines to offset the scene render area for this thread
 } ThreadData;
 
 
@@ -132,7 +132,7 @@ Colour traceRay(const Scene& scene, Ray viewRay)
 
 // render scene at given width and height and anti-aliasing level
 //ADDED: outStart parameter specifies where output should start
-void render(Scene& scene, const int width, const int height, const int aaLevel, unsigned int* outStart, int yOffset)
+void render(Scene& scene, const int width, const int height, const int aaLevel, unsigned int* outStart, unsigned int threadID, int yOffset)
 {
 	// angle between each successive ray cast (per pixel, anti-aliasing uses a fraction of this)
 	const float dirStepSize = 1.0f / (0.5f * width / tanf(PIOVER180 * 0.5f * scene.cameraFieldOfView));
@@ -141,12 +141,14 @@ void render(Scene& scene, const int width, const int height, const int aaLevel, 
 	unsigned int* out = outStart;
 
 	// loop through all the pixels
-	//ADDED: + yOffset. Shifts the scene area to render up/down according to thread
-	for (int y = (-height / 2); (y < height / 2); ++y)
+	for (int y = (-height / 2) + yOffset; y < (height / 2) + yOffset; ++y)
 	{
 		for (int x = -width / 2; x < width / 2; ++x)
 		{
-			Colour output(0.0f, 0.0f, 0.0f);
+
+			//Changing these values 
+			//Colour output(threadID * threadID * threadID);
+			Colour output(unsigned int(0));
 
 			// calculate multiple samples for each pixel
 			const float sampleStep = 1.0f / aaLevel, sampleRatio = 1.0f / (aaLevel * aaLevel);
@@ -194,8 +196,8 @@ DWORD __stdcall StartThread(void* threadDataIn)
 	}
 
 	}*/
-	printf("Thread: %d , %d", threadData->threadID, threadData->yOffset);
-	render(threadData->scene, threadData->width, threadData->height, threadData->samples, threadData->outStart, threadData->yOffset);
+	printf("Thread: %d", threadData->threadID);
+	render(threadData->scene, threadData->width, threadData->height, threadData->samples, threadData->outStart, threadData->threadID, threadData->yOffset);
 
 	ExitThread(NULL);
 }
@@ -208,18 +210,31 @@ void threading(Scene& scene, const int width, const int height, const int sample
 	HANDLE *threadHandles = new HANDLE[threads];	//Create array of thread handles
 	ThreadData *tDatas = new ThreadData[threads];	//Create array of ThreadData structs
 
-	for (unsigned int threadID = 0; threadID < threads; threadID++) {
+	unsigned int threadHeight = (height / threads) - (height / threads) % 2; //The height of most threads. Rounded down to even numbers so the render loop's divide by 2 works correctly
+	unsigned int threadID;
+	for (threadID = 0; threadID < threads -1; threadID++) {
 		tDatas[threadID].threadID = threadID;
 		tDatas[threadID].scene = scene;
 		tDatas[threadID].samples = samples;
 		tDatas[threadID].width = width;
-		tDatas[threadID].height = height / threads;
-		tDatas[threadID].yOffset = 0;
-		tDatas[threadID].outStart = buffer + width * (height / threads) * threadID; //Divide height of image into equal chunks for threads. Output start point is beginning of buffer plus however many pixels are being rendered by earlier threads
+		tDatas[threadID].height = threadHeight;
+		tDatas[threadID].outStart = buffer + width * threadHeight * threadID;	//Output start point is beginning of buffer plus however many pixels are being rendered by earlier threads
+		tDatas[threadID].yOffset = threadHeight * (threadID - threads / 2);		//Calculate vertical offset from center of scene for this thread to render
 		threadHandles[threadID] = CreateThread(NULL, 0, StartThread, &tDatas[threadID], 0, NULL);
 	}
+	//Last thread completes the lines left from removing any odd lines when height doesn't evenly divide by threads in addition to the amount completed by other threads
+	unsigned int oddLines = height - threadHeight * threads;
+	tDatas[threadID].threadID = threadID;
+	tDatas[threadID].scene = scene;
+	tDatas[threadID].samples = samples;
+	tDatas[threadID].width = width;
+	tDatas[threadID].height = threadHeight + oddLines;
+	tDatas[threadID].outStart = buffer + width * threadHeight * threadID;				
+	tDatas[threadID].yOffset = threadHeight * (threadID - threads / 2) + oddLines/2;	
+	threadHandles[threadID] = CreateThread(NULL, 0, StartThread, &tDatas[threadID], 0, NULL);
 
 	WaitForMultipleObjects(threads, threadHandles, TRUE, INFINITE);
+
 }
 
 // read command line arguments, render, and write out BMP file
@@ -232,7 +247,7 @@ int main(int argc, char* argv[])
 	char* outputFilename = "Outputs/cornell-1024x1024x1.bmp";
 
 	// rendering options
-	unsigned int threads = 1;			// currently unused
+	unsigned int threads = 1;			
 	bool colourise = false;				// currently unused
 	unsigned int blockSize = -1;		// curerntly unused
 
@@ -293,6 +308,7 @@ int main(int argc, char* argv[])
 
 	// output BMP file
 	write_bmp(outputFilename, buffer, width, height, width);
+	//getchar(); //pause
 
 	return 0;
 }

@@ -1,0 +1,733 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = 0.0, 0.0, -300.0;
+	Camera.Rotation = 0.0;
+	Camera.FieldOfView = 90.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 40;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 47;
+	NumberOfSpheres = 41;
+	NumberOfBlobs = 0;
+	NumberOfLights = 1; 
+	NumberOfPlanes = 5;
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+Material0
+{
+        Diffuse = 0.160784, 0.137255, 0.745098;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material1
+{
+        Diffuse = 0.517647, 0.882353, 0.423529;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material2
+{
+        Diffuse = 0.839216, 0.682353, 0.321569;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material3
+{
+        Diffuse = 0.564706, 0.286275, 0.945098;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material4
+{
+        Diffuse = 0.945098, 0.733333, 0.913725;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material5
+{
+        Diffuse = 0.921569, 0.701961, 0.650980;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material6
+{
+        Diffuse = 0.858824, 0.235294, 0.529412;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material7
+{
+        Diffuse = 0.047059, 0.243137, 0.600000;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material8
+{
+        Diffuse = 0.141176, 0.368627, 0.050980;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material9
+{
+        Diffuse = 0.109804, 0.023529, 0.717647;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material10
+{
+        Diffuse = 0.278431, 0.870588, 0.701961;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material11
+{
+        Diffuse = 0.070588, 0.301961, 0.784314;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material12
+{
+        Diffuse = 0.262745, 0.733333, 0.545098;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material13
+{
+        Diffuse = 0.650980, 0.121569, 0.011765;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material14
+{
+        Diffuse = 0.352941, 0.490196, 0.035294;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material15
+{
+        Diffuse = 0.219608, 0.145098, 0.121569;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material16
+{
+        Diffuse = 0.364706, 0.831373, 0.796078;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material17
+{
+        Diffuse = 0.988235, 0.588235, 0.960784;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material18
+{
+        Diffuse = 0.270588, 0.231373, 0.074510;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material19
+{
+        Diffuse = 0.050980, 0.537255, 0.039216;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material20
+{
+        Diffuse = 0.109804, 0.858824, 0.682353;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material21
+{
+        Diffuse = 0.196078, 0.125490, 0.603922;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material22
+{
+        Diffuse = 0.313726, 0.933333, 0.250980;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material23
+{
+        Diffuse = 0.470588, 0.211765, 0.992157;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material24
+{
+        Diffuse = 0.070588, 0.286275, 0.196078;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material25
+{
+        Diffuse = 0.964706, 0.619608, 0.490196;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material26
+{
+        Diffuse = 0.286275, 0.862745, 0.678431;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material27
+{
+        Diffuse = 0.309804, 0.078431, 0.949020;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material28
+{
+        Diffuse = 0.266667, 0.250980, 0.400000;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material29
+{
+        Diffuse = 0.815686, 0.419608, 0.768627;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material30
+{
+        Diffuse = 0.188235, 0.717647, 0.196078;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material31
+{
+        Diffuse = 0.231373, 0.631373, 0.133333;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material32
+{
+        Diffuse = 0.964706, 0.133333, 0.568627;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material33
+{
+        Diffuse = 0.615686, 0.882353, 0.545098;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material34
+{
+        Diffuse = 0.121569, 0.854902, 0.690196;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material35
+{
+        Diffuse = 0.792157, 0.600000, 0.007843;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material36
+{
+        Diffuse = 0.725490, 0.447059, 0.615686;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material37
+{
+        Diffuse = 0.286275, 0.172549, 0.501961;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material38
+{
+        Diffuse = 0.494118, 0.772549, 0.600000;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+Material39
+{
+        Diffuse = 0.835294, 0.913725, 0.501961;
+        Reflection = 0.5;
+        Specular = 1.2, 1.2, 1.2;
+        Power = 60;
+}
+
+Material40
+{
+	Type = checkerboard;
+	Wrapping = planar_xz;
+	Diffuse = 0.75, 0.75, 0.75;
+	Diffuse2 = 0.25, 0.75, 0.25;
+	Size = 100;
+
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+	Reflection = 0.05;
+}
+
+Material41
+{
+	Type = gouraud;
+
+	Diffuse = 0.75, 0.25, 0.25;
+
+//	Specular = 1.2, 1.2, 1.2;  
+//	Power = 60;
+	Reflection = 0.05;
+}
+Material42
+{
+	Type = gouraud;
+
+	Diffuse = 0.25, 0.25, 0.75;
+
+//	Specular = 1.2, 1.2, 1.2;  
+//	Power = 60;
+	Reflection = 0.05;
+}
+Material43
+{
+	Type = gouraud;
+
+	Reflection = 0.3;
+
+	Specular = 1.5, 1.5, 1.5;  
+	Power = 30;
+}
+Material44
+{
+	Type = gouraud;
+
+	Refraction = 1.0;
+	Density = 2.0;
+
+	Specular = 1.5, 1.5, 1.5;  
+	Power = 30;
+}
+Material45
+{
+	Type = checkerboard;
+	Wrapping = planar_xy;
+	Diffuse = 0.9, 0.9, 0.9;
+	Diffuse2 = 0.7, 0.7, 0.7;
+	Size = 100;
+}
+Material46
+{
+	Type = checkerboard;
+	Wrapping = planar_xz;
+	Diffuse2 = 0.75, 0.75, 0.75;
+	Diffuse = 0.25, 0.75, 0.25;
+	Size = 100;
+}
+
+//(Material matRED
+//	(colour 0.75 0.25 0.25 )
+//	(ka 0.5 ) (kd 0.6 ) (ks 0.1 ) (ksp 150 ) (ksm 1 ) (kt 0 ) (ktn 1 ))
+//(Material matBLUE
+//	(colour 0.25 0.25 0.75 )
+//	(ka 0.5 ) (kd 0.6 ) (ks 0.1 ) (ksp 20 ) (ksm 1 ) (kt 0 ) (ktn 1 ))
+//(Material matWHITE
+//	(colour 0.75 0.75 0.75 )
+//	(ka 0.5 ) (kd 0.6 ) (ks 0.1 ) (ksp 40 ) (ksm 1 ) (kt 0 ) (ktn 1 ))
+///////////////////////////////////////
+//         List of planes            //
+/////////////////////////////////////// 
+
+Plane0
+{
+	Center = 0.0, -400.0, 0.0;
+	Normal = 0.0, 1.0, 0.0;
+	Material.Id = 40;
+}
+Plane1
+{
+	Center = -400.0, 0.0, 0.0;
+	Normal = 1.0, 0.0, 0.0;
+	Material.Id = 41;
+}
+Plane2
+{
+	Center = 400.0, 0.0, 0.0;
+	Normal = -1.0, 0.0, 0.0;
+	Material.Id = 42;
+}
+Plane3
+{
+	Center = 0.0, 400.0, 0.0;
+	Normal = 0.0, -1.0, 0.0;
+	Material.Id = 46;
+}
+Plane4
+{
+	Center = 0.0, 0.0, 3000.0;
+	Normal = 0.0, 0.0, -1.0;
+	Material.Id = 45;
+}
+
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+        Center = 0.000000, 270.000000, 2800.000000;
+        Size = 70.000000;
+        Material.Id = 0;
+}
+Sphere1
+{
+        Center = 83.434593, 256.785278, 2730.000000;
+        Size = 70.000000;
+        Material.Id = 1;
+}
+Sphere2
+{
+        Center = 158.702011, 218.434586, 2660.000000;
+        Size = 70.000000;
+        Material.Id = 2;
+}
+Sphere3
+{
+        Center = 218.434586, 158.702011, 2590.000000;
+        Size = 70.000000;
+        Material.Id = 3;
+}
+Sphere4
+{
+        Center = 256.785278, 83.434586, 2520.000000;
+        Size = 70.000000;
+        Material.Id = 4;
+}
+Sphere5
+{
+        Center = 270.000000, -0.000012, 2450.000000;
+        Size = 70.000000;
+        Material.Id = 5;
+}
+Sphere6
+{
+        Center = 256.785248, -83.434601, 2380.000000;
+        Size = 70.000000;
+        Material.Id = 6;
+}
+Sphere7
+{
+        Center = 218.434586, -158.701996, 2310.000000;
+        Size = 70.000000;
+        Material.Id = 7;
+}
+Sphere8
+{
+        Center = 158.701996, -218.434601, 2240.000000;
+        Size = 70.000000;
+        Material.Id = 8;
+}
+Sphere9
+{
+        Center = 83.434532, -256.785278, 2170.000000;
+        Size = 70.000000;
+        Material.Id = 9;
+}
+Sphere10
+{
+        Center = -0.000024, -270.000000, 2100.000000;
+        Size = 70.000000;
+        Material.Id = 10;
+}
+Sphere11
+{
+        Center = -83.434647, -256.785248, 2030.000000;
+        Size = 70.000000;
+        Material.Id = 11;
+}
+Sphere12
+{
+        Center = -158.702042, -218.434570, 1960.000000;
+        Size = 70.000000;
+        Material.Id = 12;
+}
+Sphere13
+{
+        Center = -218.434616, -158.701965, 1890.000000;
+        Size = 70.000000;
+        Material.Id = 13;
+}
+Sphere14
+{
+        Center = -256.785248, -83.434616, 1820.000000;
+        Size = 70.000000;
+        Material.Id = 14;
+}
+Sphere15
+{
+        Center = -270.000000, 0.000003, 1750.000000;
+        Size = 70.000000;
+        Material.Id = 15;
+}
+Sphere16
+{
+        Center = -256.785248, 83.434624, 1680.000000;
+        Size = 70.000000;
+        Material.Id = 16;
+}
+Sphere17
+{
+        Center = -218.434540, 158.702087, 1610.000000;
+        Size = 70.000000;
+        Material.Id = 17;
+}
+Sphere18
+{
+        Center = -158.701935, 218.434662, 1540.000000;
+        Size = 70.000000;
+        Material.Id = 18;
+}
+Sphere19
+{
+        Center = -83.434578, 256.785278, 1470.000000;
+        Size = 70.000000;
+        Material.Id = 19;
+}
+Sphere20
+{
+        Center = 0.000047, 270.000000, 1400.000000;
+        Size = 70.000000;
+        Material.Id = 20;
+}
+Sphere21
+{
+        Center = 83.434662, 256.785248, 1330.000000;
+        Size = 70.000000;
+        Material.Id = 21;
+}
+Sphere22
+{
+        Center = 158.702118, 218.434525, 1260.000000;
+        Size = 70.000000;
+        Material.Id = 22;
+}
+Sphere23
+{
+        Center = 218.434601, 158.701996, 1190.000000;
+        Size = 70.000000;
+        Material.Id = 23;
+}
+Sphere24
+{
+        Center = 256.785278, 83.434532, 1120.000000;
+        Size = 70.000000;
+        Material.Id = 24;
+}
+Sphere25
+{
+        Center = 270.000000, -0.000091, 1050.000000;
+        Size = 70.000000;
+        Material.Id = 25;
+}
+Sphere26
+{
+        Center = 256.785217, -83.434708, 980.000000;
+        Size = 70.000000;
+        Material.Id = 26;
+}
+Sphere27
+{
+        Center = 218.434494, -158.702148, 910.000000;
+        Size = 70.000000;
+        Material.Id = 27;
+}
+Sphere28
+{
+        Center = 158.702057, -218.434555, 840.000000;
+        Size = 70.000000;
+        Material.Id = 28;
+}
+Sphere29
+{
+        Center = 83.434616, -256.785248, 770.000000;
+        Size = 70.000000;
+        Material.Id = 29;
+}
+Sphere30
+{
+        Center = -0.000006, -270.000000, 700.000000;
+        Size = 70.000000;
+        Material.Id = 30;
+}
+Sphere31
+{
+        Center = -83.434631, -256.785248, 630.000000;
+        Size = 70.000000;
+        Material.Id = 31;
+}
+Sphere32
+{
+        Center = -158.702087, -218.434540, 560.000000;
+        Size = 70.000000;
+        Material.Id = 32;
+}
+Sphere33
+{
+        Center = -218.434662, -158.701935, 490.000000;
+        Size = 70.000000;
+        Material.Id = 33;
+}
+Sphere34
+{
+        Center = -256.785309, -83.434456, 420.000000;
+        Size = 70.000000;
+        Material.Id = 34;
+}
+Sphere35
+{
+        Center = -270.000000, 0.000179, 350.000000;
+        Size = 70.000000;
+        Material.Id = 35;
+}
+Sphere36
+{
+        Center = -256.785187, 83.434792, 280.000000;
+        Size = 70.000000;
+        Material.Id = 36;
+}
+Sphere37
+{
+        Center = -218.434586, 158.702011, 210.000000;
+        Size = 70.000000;
+        Material.Id = 37;
+}
+Sphere38
+{
+        Center = -158.701996, 218.434601, 140.000000;
+        Size = 70.000000;
+        Material.Id = 38;
+}
+Sphere39
+{
+        Center = -83.434532, 256.785278, 70.000000;
+        Size = 70.000000;
+        Material.Id = 39;
+}
+Sphere40
+{
+		Center = -160, -130, 1200;
+		Size = 220;
+		Material.Id = 43;
+}
+
+
+///////////////////////////////////////
+//         List of blobs           //
+/////////////////////////////////////// 
+Blob0
+{
+  Spheres = 3;
+  Center0 = 160.0, 290.0, 320.0;
+  Center1 = 400.0, 290.0, 480.0; 
+  Center2 = 250.0, 140.0, 400.0; 
+  Size = 80.0;
+  Material.Id = 3;
+}
+Blob1
+{
+  Spheres = 5;
+  Center0 = 300.0, 300.0, 320.0;
+  Center1 = 320.0, 330.0, 300.0; 
+  Center2 = 310.0, 360.0, 270.0; 
+  Center3 = 280.0, 340.0, 290.0; 
+  Center4 = 280.0, 300.0, 290.0; 
+  Size = 20.0;
+  Material.Id = 4;
+}
+
+Blob2
+{
+  Spheres = 3;
+  Center0 = 50.0, 130.0, 280.0;
+  Center1 = 110.0, 150.0, 320.0; 
+  Center2 = 150.0, 110.0, 300.0; 
+  Size = 30.0;
+  Material.Id = 4;
+}
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+Light0
+{
+  Position = 50.0, 100.0, 1100.0;
+//  Position = 0.0, 0.0, 400.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+Light1
+{
+  Position = 0.0, -300.0, -3000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+
+

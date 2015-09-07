@@ -1,10 +1,17 @@
-﻿Build started 4/09/2015 8:01:37 PM.
+﻿Build started 7/09/2015 5:58:28 PM.
      1>Project "C:\KIT308_Assignment1\RayTracer\RayTracer.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (RayTracer.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Raytrace.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Config.cpp ImageIO.cpp Intersection.cpp Lighting.cpp Raytrace.cpp Scene.cpp Texture.cpp
+         Config.cpp
+         ImageIO.cpp
+         Intersection.cpp
+         Lighting.cpp
          Raytrace.cpp
+         Scene.cpp
+         Texture.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\KIT308_Assignment1\Release\RayTracer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\KIT308_Assignment1\Release\RayTracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\KIT308_Assignment1\Release\RayTracer.lib" /MACHINE:X86 /SAFESEH Release\Config.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\KIT308_Assignment1\Release\RayTracer Basic.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\KIT308_Assignment1\Release\RayTracer Basic.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\KIT308_Assignment1\Release\RayTracer Basic.lib" /MACHINE:X86 /SAFESEH Release\Config.obj
          Release\ImageIO.obj
          Release\Intersection.obj
          Release\Lighting.obj
@@ -12,13 +19,11 @@
          Release\Scene.obj
          Release\Texture.obj
          Generating code
-         2 of 571 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-           0 functions were new in current compilation
-           1 functions had inline decision re-evaluated but remain unchanged
+         All 571 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
          Finished generating code
-         RayTracer.vcxproj -> C:\KIT308_Assignment1\Release\RayTracer.exe
+         RayTracer.vcxproj -> C:\KIT308_Assignment1\Release\RayTracer Basic.exe
      1>Done Building Project "C:\KIT308_Assignment1\RayTracer\RayTracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.97
+Time Elapsed 00:00:03.77
