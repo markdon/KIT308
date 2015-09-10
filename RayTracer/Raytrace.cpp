@@ -12,6 +12,8 @@
 #include "ImageIO.h"
 
 unsigned int buffer[MAX_WIDTH * MAX_HEIGHT];
+bool colourise;						//Tint pixels when rendering.
+unsigned int colourIntensity;		//Intensity of pixel tinting.
 
 //ADDED: ThreadData struct
 typedef struct {
@@ -136,7 +138,7 @@ void render(Scene& scene, const int width, const int height, const int aaLevel, 
 {
 	// angle between each successive ray cast (per pixel, anti-aliasing uses a fraction of this)
 	const float dirStepSize = 1.0f / (0.5f * width / tanf(PIOVER180 * 0.5f * scene.cameraFieldOfView));
-
+	unsigned int threadMod7 = threadID % 7; //Assign number out of 7 for thread colour
 	// pointer to output buffer
 	unsigned int* out = outStart;
 
@@ -145,10 +147,16 @@ void render(Scene& scene, const int width, const int height, const int aaLevel, 
 	{
 		for (int x = -width / 2; x < width / 2; ++x)
 		{
-
-			//Changing these values 
-			//Colour output(threadID * threadID * threadID);
-			Colour output(unsigned int(0));
+			/*	Set thread colour tint
+			Bitwise logic: threadMod7 will have up to all lowest 3 bits on.
+			Take third bit, left shifts into lowest bit in blue byte, OR into next.
+			Take second bit, left shifts into lowest bit in green byte, OR into next.
+			Take third bit, left shifts into lowest bit in red byte.
+			This number is then multiplied to amplify the turned on colours.
+			*/
+			unsigned int colour = 0;
+			if (colourise) colour = (((threadMod7 & 4) << 14) | ((threadMod7 & 2) << 7) | (threadMod7 & 1)) * colourIntensity;
+			Colour output(colour);
 
 			// calculate multiple samples for each pixel
 			const float sampleStep = 1.0f / aaLevel, sampleRatio = 1.0f / (aaLevel * aaLevel);
@@ -188,15 +196,6 @@ DWORD __stdcall StartThread(void* threadDataIn)
 {
 	ThreadData* threadData = (ThreadData*)threadDataIn;
 
-	/*unsigned int* out = threadData->outStart;
-	for (unsigned int y = 0; y < threadData->height; y++) {
-	for (unsigned int x = 0; x < threadData->width; x++) {
-	*out++ = x + y;
-
-	}
-
-	}*/
-	printf("Thread: %d", threadData->threadID);
 	render(threadData->scene, threadData->width, threadData->height, threadData->samples, threadData->outStart, threadData->threadID, threadData->yOffset);
 
 	ExitThread(NULL);
@@ -248,7 +247,7 @@ int main(int argc, char* argv[])
 
 	// rendering options
 	unsigned int threads = 1;			
-	bool colourise = false;				// currently unused
+	colourise = false;				// currently unused
 	unsigned int blockSize = -1;		// curerntly unused
 
 	for (int i = 1; i < argc; i++)
@@ -282,6 +281,10 @@ int main(int argc, char* argv[])
 		{
 			blockSize = atoi(argv[++i]);
 		}
+		else if (strcmp(argv[i], "-colourIntensity") == 0)
+		{
+			colourIntensity = atoi(argv[++i]);
+		}
 		else
 		{
 			fprintf(stderr, "unknown argument: %s\n", argv[i]);
@@ -304,7 +307,7 @@ int main(int argc, char* argv[])
 	timer.end();									// record end time
 
 	// output timing information
-	printf("time taken: %ums\n", timer.getMilliseconds());
+	printf("%ums\t", timer.getMilliseconds());
 
 	// output BMP file
 	write_bmp(outputFilename, buffer, width, height, width);

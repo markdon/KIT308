@@ -12,7 +12,8 @@
 #include "ImageIO.h"
 
 unsigned int buffer[MAX_WIDTH * MAX_HEIGHT];
-bool colourise;
+bool colourise;						//Tint pixels when rendering.
+unsigned int colourIntensity;		//Intensity of pixel tinting.
 
 //ADDED: ThreadData struct
 typedef struct {
@@ -139,7 +140,6 @@ void render(Scene& scene, const int width, const int height, const int aaLevel, 
 	const float dirStepSize = 1.0f / (0.5f * width / tanf(PIOVER180 * 0.5f * scene.cameraFieldOfView));
 
 	unsigned int threadMod7 = threadID % 7; //Assign number out of 7 for thread colour
-	unsigned int colourIntensity = 255;		//Set the intensity of colour tinting 0-255;
 
 	unsigned int line;
 	while ((line = InterlockedIncrement(lineCount)) < height)
@@ -149,8 +149,10 @@ void render(Scene& scene, const int width, const int height, const int aaLevel, 
 		int y = line - height / 2;
 		for (int x = -width / 2; x < width / 2; ++x)
 		{
-			//Set thread colour tint
-			/* Bitwise logic: threadMod7 will have up to all lowest 3 bits on.
+			
+
+			/*	Set thread colour tint
+				Bitwise logic: threadMod7 will have up to all lowest 3 bits on.
 				Take third bit, left shifts into lowest bit in blue byte, OR into next.
 				Take second bit, left shifts into lowest bit in green byte, OR into next.
 				Take third bit, left shifts into lowest bit in red byte.
@@ -242,6 +244,7 @@ int main(int argc, char* argv[])
 
 	// rendering options
 	colourise = false;
+	colourIntensity = 150;
 	unsigned int threads = 1;			
 	unsigned int blockSize = -1;		// curerntly unused
 
@@ -276,6 +279,10 @@ int main(int argc, char* argv[])
 		{
 			blockSize = atoi(argv[++i]);
 		}
+		else if (strcmp(argv[i], "-colourIntensity") == 0)
+		{
+			colourIntensity = atoi(argv[++i]);
+		}
 		else
 		{
 			fprintf(stderr, "unknown argument: %s\n", argv[i]);
@@ -295,7 +302,7 @@ int main(int argc, char* argv[])
 	timer.end();									// record end time
 
 	// output timing information
-	printf("time taken: %ums\n", timer.getMilliseconds());
+	printf("%ums\t", timer.getMilliseconds());
 
 	// output BMP file
 	write_bmp(outputFilename, buffer, width, height, width);

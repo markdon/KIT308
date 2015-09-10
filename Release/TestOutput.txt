@@ -1,0 +1,2 @@
+968ms	906ms	609ms	703ms	594ms	593ms	484ms	609ms	 																
+984ms	547ms	625ms	578ms	516ms	625ms	562ms	547ms	

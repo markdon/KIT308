@@ -1,0 +1,4 @@
+del	TestOutput.txt															
+"FOR /L %%G IN (1,1,8) DO"	"""RayTracer Basic.exe"""	-input	Scenes/cornell.txt	-output	Outputs/cornell-1024x1024x1.bmp	-size	1024	1024	-samples	1	-colourise	-colourIntensity	50	-threads	%%G	>> TestOutput.txt
+"echo ""\n"" >> TestOutput.txt"																
+"FOR /L %%G IN (1,1,8) DO"	"""RayTracer Dynamic Lines.exe"""	-input	Scenes/cornell.txt	-output	Outputs/cornell-1024x1024x1.bmp	-size	1024	1024	-samples	1	-colourise	-colourIntensity	50	-threads	%%G	>> TestOutput.txt
