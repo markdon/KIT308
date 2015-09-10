@@ -12,6 +12,7 @@
 #include "ImageIO.h"
 
 unsigned int buffer[MAX_WIDTH * MAX_HEIGHT];
+bool colourise;
 
 //ADDED: ThreadData struct
 typedef struct {
@@ -19,8 +20,9 @@ typedef struct {
 	unsigned int threadID;	//Sequencial ID of thread.
 	unsigned int samples;	//Raytrace samples per pixel (aaLevel)
 	unsigned int width;		//The amount of pixels in each row
-	unsigned int* outStart;	//Pointer to position in buffer to start writing
-	int sceneYCoord;		//The line this thread is currently rendering
+	unsigned int height;
+	unsigned int* out;		//Pointer to position in buffer to write pixel
+	unsigned int* lineCount;		//Pointer to number of lines rendered
 } ThreadData;
 
 
@@ -131,49 +133,62 @@ Colour traceRay(const Scene& scene, Ray viewRay)
 
 // render scene at given width and height and anti-aliasing level
 //ADDED: outStart parameter specifies where output should start
-void render(Scene& scene, const int width, const int aaLevel, unsigned int* outStart, unsigned int threadID, int sceneYCoord)
+void render(Scene& scene, const int width, const int height, const int aaLevel, unsigned int threadID, unsigned int* lineCount)
 {
 	// angle between each successive ray cast (per pixel, anti-aliasing uses a fraction of this)
 	const float dirStepSize = 1.0f / (0.5f * width / tanf(PIOVER180 * 0.5f * scene.cameraFieldOfView));
 
-	// pointer to output buffer
-	unsigned int* out = outStart;
+	unsigned int threadMod7 = threadID % 7; //Assign number out of 7 for thread colour
+	unsigned int colourIntensity = 255;		//Set the intensity of colour tinting 0-255;
 
-	// loop through all the pixels
-	int y = sceneYCoord;
-	for (int x = -width / 2; x < width / 2; ++x)
+	unsigned int line;
+	while ((line = InterlockedIncrement(lineCount)) < height)
 	{
-
-		//Colour output(threadID * threadID * threadID);
-		Colour output(unsigned int(0));
-
-		// calculate multiple samples for each pixel
-		const float sampleStep = 1.0f / aaLevel, sampleRatio = 1.0f / (aaLevel * aaLevel);
-			
-		// loop through all sub-locations within the pixel
-		for (float fragmentx = float(x); fragmentx < x + 1.0f; fragmentx += sampleStep) //1.0f / aaLevel)
+		// loop through all the pixels
+		//tDatas[index].sceneYCoord = line - height / 2;
+		int y = line - height / 2;
+		for (int x = -width / 2; x < width / 2; ++x)
 		{
-			for (float fragmenty = float(y); fragmenty < y + 1.0f; fragmenty += sampleStep) //1.0f / aaLevel)
+			//Set thread colour tint
+			/* Bitwise logic: threadMod7 will have up to all lowest 3 bits on.
+				Take third bit, left shifts into lowest bit in blue byte, OR into next.
+				Take second bit, left shifts into lowest bit in green byte, OR into next.
+				Take third bit, left shifts into lowest bit in red byte.
+				This number is then multiplied to amplify the turned on colours.
+			*/
+			unsigned int colour = 0;
+			if (colourise) colour = (((threadMod7 & 4) << 14) | ((threadMod7 & 2) << 7) | (threadMod7 & 1)) * colourIntensity;
+			Colour output(colour);
+
+
+			// calculate multiple samples for each pixel
+			const float sampleStep = 1.0f / aaLevel, sampleRatio = 1.0f / (aaLevel * aaLevel);
+
+			// loop through all sub-locations within the pixel
+			for (float fragmentx = float(x); fragmentx < x + 1.0f; fragmentx += sampleStep) //1.0f / aaLevel)
 			{
-				// direction of default forward facing ray
-				Vector dir = { fragmentx * dirStepSize, fragmenty * dirStepSize, 1.0f }; 
+				for (float fragmenty = float(y); fragmenty < y + 1.0f; fragmenty += sampleStep) //1.0f / aaLevel)
+				{
+					// direction of default forward facing ray
+					Vector dir = { fragmentx * dirStepSize, fragmenty * dirStepSize, 1.0f };
 
-				// rotated direction of ray
-				Vector rotatedDir = { 
-					dir.x * cosf(scene.cameraRotation) - dir.z * sinf(scene.cameraRotation), 
-					dir.y, 
-					dir.x * sinf(scene.cameraRotation) + dir.z * cosf(scene.cameraRotation) };
+					// rotated direction of ray
+					Vector rotatedDir = {
+						dir.x * cosf(scene.cameraRotation) - dir.z * sinf(scene.cameraRotation),
+						dir.y,
+						dir.x * sinf(scene.cameraRotation) + dir.z * cosf(scene.cameraRotation) };
 
-				// view ray starting from camera position and heading in rotated (normalised) direction
-				Ray viewRay = { scene.cameraPosition, normalise(rotatedDir) };
+					// view ray starting from camera position and heading in rotated (normalised) direction
+					Ray viewRay = { scene.cameraPosition, normalise(rotatedDir) };
 
-				// follow ray and add proportional of the result to the final pixel colour
-				output += sampleRatio * traceRay(scene, viewRay);
+					// follow ray and add proportional of the result to the final pixel colour
+					output += sampleRatio * traceRay(scene, viewRay);
+				}
 			}
-		}
 
-		// store saturated final colour value in image buffer
-		*out++ = output.convertToPixel(scene.exposure);
+			// store saturated final colour value in image buffer. x is translated from scene coords to pixel coords.
+			buffer[(x + width/2) + width * line] = output.convertToPixel(scene.exposure);
+		}
 	}
 }
 
@@ -183,7 +198,7 @@ Starts a render() function with parameters from threadData
 DWORD __stdcall StartThread(void* threadDataIn)
 {
 	ThreadData* threadData = (ThreadData*)threadDataIn;
-	render(threadData->scene, threadData->width, threadData->samples, threadData->outStart, threadData->threadID, threadData->sceneYCoord);
+	render(threadData->scene, threadData->width, threadData->height, threadData->samples, threadData->threadID, threadData->lineCount);
 
 	ExitThread(NULL);
 }
@@ -195,24 +210,24 @@ void threading(Scene& scene, const int width, const int height, const int sample
 
 	HANDLE *threadHandles = new HANDLE[threads];	//Create array of thread handles
 	ThreadData *tDatas = new ThreadData[threads];	//Create array of ThreadData structs
+	unsigned int lineCount = -1;					//Count of number of lines rendered. Incremented by threads as they start a line.
 
-	for (unsigned int line = 0; line < height; line++) {
-		DWORD index = line;
-
-		if (line >= threads) {
-			index = WaitForMultipleObjects(threads, threadHandles, FALSE, INFINITE);
-		}
-
-		tDatas[index].threadID = index;
-		tDatas[index].scene = scene;
-		tDatas[index].samples = samples;
-		tDatas[index].width = width;
-		tDatas[index].outStart = buffer + width * line;							//Output start point is beginning of buffer plus however many pixels are being rendered by earlier threads
-		tDatas[index].sceneYCoord = line - height/2;
-		threadHandles[index] = CreateThread(NULL, 0, StartThread, &tDatas[index], 0, NULL);
+	//Create all the threads and give starting values
+	for (unsigned int i = 0; i < threads; i++) {
+		tDatas[i].threadID = i;
+		tDatas[i].scene = scene;
+		tDatas[i].samples = samples;
+		tDatas[i].width = width;
+		tDatas[i].height = height;
+		tDatas[i].lineCount = &lineCount;
+		threadHandles[i] = CreateThread(NULL, 0, StartThread, &tDatas[i], 0, NULL);
 	}
 
-	WaitForMultipleObjects(threads, threadHandles, TRUE, INFINITE);
+	for (unsigned int i = 0; i < threads; i++) {
+		WaitForSingleObject(threadHandles[i], INFINITE);
+	}
+	delete[] threadHandles;
+	delete[] tDatas;
 
 }
 
@@ -226,8 +241,8 @@ int main(int argc, char* argv[])
 	char* outputFilename = "Outputs/cornell-1024x1024x1.bmp";
 
 	// rendering options
+	colourise = false;
 	unsigned int threads = 1;			
-	bool colourise = false;				// currently unused
 	unsigned int blockSize = -1;		// curerntly unused
 
 	for (int i = 1; i < argc; i++)
@@ -276,10 +291,7 @@ int main(int argc, char* argv[])
     }
 
 	Timer timer;									// create timer
-	
-
-	//render(scene, width, height, samples);			// raytrace scene
-	threading(scene, width, height, samples, colourise, threads);									//ADDED: threading(); Begin thread creation	
+	threading(scene, width, height, samples, colourise, threads);	//Start thread creation.
 	timer.end();									// record end time
 
 	// output timing information

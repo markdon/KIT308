@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial03b_DynamicLines", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracer Dynamic Lines", "RayTracer Dynamic Lines\RayTracer Dynamic Lines.vcxproj", "{BB23C721-3316-406D-A371-9F14DF328C09}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial03c_DynamicLinesViaSharedMem_Complete", "Tutorial03c_DynamicLinesViaSharedMem_Complete\Tutorial03c_DynamicLinesViaSharedMem_Complete.vcxproj", "{AD6E8073-9C10-476F-BADF-7704B3B49875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{BB23C721-3316-406D-A371-9F14DF328C09}.Debug|Win32.Build.0 = Debug|Win32
 		{BB23C721-3316-406D-A371-9F14DF328C09}.Release|Win32.ActiveCfg = Release|Win32
 		{BB23C721-3316-406D-A371-9F14DF328C09}.Release|Win32.Build.0 = Release|Win32
+		{AD6E8073-9C10-476F-BADF-7704B3B49875}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD6E8073-9C10-476F-BADF-7704B3B49875}.Debug|Win32.Build.0 = Debug|Win32
+		{AD6E8073-9C10-476F-BADF-7704B3B49875}.Release|Win32.ActiveCfg = Release|Win32
+		{AD6E8073-9C10-476F-BADF-7704B3B49875}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
